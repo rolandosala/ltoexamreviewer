@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="shipping">
+        <fieldset>
+            <legend>Shipping Method</legend>
+            <div id="radio-container"></div>
+            <!-- <label><input type="radio" name="method" value="1st">First-class</label>
+            <label><input type="radio" name="method" value="2day">2-day Air</label>
+            <label><input type="radio" name="method" value="overnite">Overnight</label> -->
+        </fieldset>
+    </form>
+
+
+    <button id="submit">Submit</button>
+
+    <script>
+        //const radiobutton = document.querySelectorAll('input[name="radiobtn"]');
+        const radiobutton = document.getElementsByName('radiobtn');
+        const radioContainer = document.getElementById('radio-container');
+        const submit = document.getElementById('submit');
+        //var methods = document.forms.shipping.elements.method;
+        var radios = document.getElementsByName('radiobtn');
+        var shipping_method;
+        var user_select;
+        const radioValue = [
+            {
+                id: 1,
+                value: "Sample1"
+            },
+            {
+                id: 2,
+                value: "Sample2"
+            },
+            {
+                id: 3,
+                value: "Sample3"
+            },
+        ]
+
+        function loadData() {
+            for (let i = 0; i < radioValue.length; i++) {
+                radioContainer.innerHTML +=
+                    `<label>
+                    <input type="radio" name="radiobtn" id="Sample1" value="${radioValue[i].value}">${radioValue[i].value}
+                </label>`
+            }
+            //console.log(radioContainer)
+        }
+        loadData();
+
+        submit.onclick = () => {
+            //console.log(radios.length); 
+            for (var i = 0; i < radios.length; i++)
+                if (radios[i].checked) user_select = radios[i].value;
+            console.log(user_select);
+        }
+
+        const num1 = ['Squash', 'Cameron', 'Lemon', 'Grapes'];
+        const num2 = ['Red', 'Cameron', 'Lemon', 'Yellow'];
+        const num3 = [];
+        for(let i = 0; i < num1.length; i++) {
+            //console.log(num1[i]);
+            /* for(let x = 0; x < num2.length; x++) {
+                if(num1[i] == num2[x]) {
+                    num3.push(num2[x]);
+                    console.log(num3);
+                }
+            } */
+            if(num2.includes(num1[i])) {
+                num3.push(num2[i]);
+                console.log(num3);
+                /* num1.filter(function(x) {
+                   
+                    
+                    
+                }); */
+            }
+        }
+
+        //console.log(num1);
+       // console.log(num2);
+
+    </script>
+</body>
+
+</html>

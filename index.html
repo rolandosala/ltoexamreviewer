@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LTO REVIEWER</title>
+</head>
+
+<body>
+    <main>
+        <section class="landing-section">
+            <div class="logo-container">
+
+            </div>
+            <div class="option-container">
+                <button id="btn_review">TAKE A REVIEW</button>
+                <button id="btn_test">TAKE A TEST</button>
+            </div>
+        </section>
+        <section class="exam-section">
+            <div class="navigation-container">
+                <div class="timer-container">
+                    <h2 id="timer">00:00:00</h2>
+                </div>
+                <div class="item-container">
+                    <h2 id="item-count">01 / 60</h2>
+                </div>
+            </div>
+            <div class="question-container">
+                <div id="question-container"></div>
+                <div id="options-container">
+                    
+                </div>
+                <div class="button-container">
+                    <button id="btn_next">Next</button>
+                    <button id="btn_submit">Submit</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modal-test">
+            <div class="modal-header">
+                <h1>Take a test</h1>
+            </div>
+            <div class="modal-body">
+                <p>Direction:</p>
+                <p>This is a mock test and you will be timed for 1 hour, result will be displayed after your
+                    exam.</p>
+                <p>Good Luck!</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btn_start">START</button>
+                <button id="btn_cancel">CANCEL</button>
+            </div>
+        </div>
+        <div class="modal-content" id="modal-result">
+            <div class="modal-header">
+                <h1>Test Result</h1>
+            </div>
+            <div class="modal-body">
+                <div class="indicator-container">
+                    <p id="indicator" style="font-size: 2em; font-weight: 600;">Pass</p>
+                    <p id="percentage" style="font-size: 2em; font-weight: 600;">80%</p>
+                    <p id="indicator1" style="font-size: 1.5em; font-weight: 500;">Congratulations!</p>
+                </div>
+                <p id="correct_items">Correct Items: 50</p>
+                <p id="incorrect_items">Incorrect Items : 10</p>
+                <p id="total_items">Total Items: 60</p>
+                <!-- <p>This is a mock test and you will be timed for 1 hour, result will be displayed after your
+                    exam.</p> -->
+                
+            </div>
+            <div class="modal-footer">
+                <button id="btn_retry">RETRY</button>
+                <button id="btn_home">HOME</button>
+            </div>
+        </div>
+        <div class="modal-content" id="modal-timesup">
+            <div class="modal-header">
+                <h1>Time is Up</h1>
+            </div>
+            <div class="modal-body"> 
+            </div>
+            <div class="modal-footer">
+                <button id="btn_checkresult">CHECK RESULT</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="question.js"></script>
+</body>
+
+</html>

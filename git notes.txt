@@ -1,0 +1,10 @@
+Version Checking
+    git --Version
+
+Configure git
+    git config --global user.name "username"
+    git config --global user.email "useremail"
+
+Push Local Repository to Github
+    git remote add origin _repository_url
+
